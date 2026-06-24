@@ -1,0 +1,13 @@
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.2
+matplotlib==3.9.2
+tqdm==4.66.5
+PyYAML==6.0.2
+joblib==1.4.2
+datasets==2.21.0
+transformers==4.44.2
+tokenizers==0.19.1
+accelerate==0.34.2
+evaluate==0.4.3
+py_vncorenlp==0.1.4

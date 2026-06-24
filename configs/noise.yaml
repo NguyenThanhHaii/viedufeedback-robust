@@ -1,0 +1,58 @@
+seed: 42
+
+noise_types:
+  - no_accent
+  - abbreviation
+  - teencode
+  - typo
+  - elongation
+  - mixed
+
+rules:
+  no_accent:
+    enabled: true
+
+  abbreviation:
+    enabled: true
+    dictionary:
+      giảng viên: gv
+      giáo viên: gv
+      sinh viên: sv
+      bài tập: bt
+      kiểm tra: kt
+      không: ko
+      được: dc
+      với: vs
+
+  teencode:
+    enabled: true
+    dictionary:
+      không: ko
+      được: dc
+      rồi: r
+      quá: wa
+      biết: bít
+      hiểu: hỉu
+      thích: thik
+
+  typo:
+    enabled: true
+    probability: 0.08
+
+  elongation:
+    enabled: true
+    probability: 0.10
+    max_repeat: 4
+
+  mixed:
+    enabled: true
+    apply:
+      - no_accent
+      - abbreviation
+      - typo
+      - elongation
+
+paths:
+  noisy_dir: data/noisy
+  audit_file: outputs/tables/noise_audit_samples.csv
+  protocol_file: outputs/reports/noise_generation_protocol.md

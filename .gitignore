@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.env/
+
+# Data
+data/raw/*
+data/processed/*
+data/noisy/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/noisy/.gitkeep
+
+# Outputs
+outputs/models/*
+outputs/predictions/*
+outputs/logs/*
+*.joblib
+*.pkl
+*.pt
+*.bin
+*.safetensors
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Kaggle
+kaggle/working/

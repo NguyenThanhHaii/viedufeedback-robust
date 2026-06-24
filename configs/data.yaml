@@ -1,0 +1,29 @@
+project:
+  name: ViEduFeedback-Robust
+  repo_name: viedufeedback-robust
+  seed: 42
+
+dataset:
+  name: UIT-VSFC
+  source: TBD
+  text_col: null
+  sentiment_col: null
+  topic_col: null
+  split_col: null
+
+splits:
+  train: train
+  dev: dev
+  test: test
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  noisy_dir: data/noisy
+  outputs_dir: outputs
+  mappings_dir: outputs/mappings
+  tables_dir: outputs/tables
+  figures_dir: outputs/figures
+  metrics_dir: outputs/metrics
+  predictions_dir: outputs/predictions
+  reports_dir: outputs/reports

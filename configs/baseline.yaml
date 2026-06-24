@@ -1,0 +1,31 @@
+seed: 42
+
+models:
+  majority:
+    enabled: true
+
+  tfidf_word_svm:
+    enabled: true
+    analyzer: word
+    ngram_range: [1, 2]
+    min_df: 2
+    max_features: 50000
+    class_weight: balanced
+
+  tfidf_char_svm:
+    enabled: true
+    analyzer: char_wb
+    ngram_range: [3, 5]
+    min_df: 2
+    max_features: 80000
+    class_weight: balanced
+
+metrics:
+  primary: macro_f1
+  report:
+    - accuracy
+    - macro_f1
+    - weighted_f1
+    - per_class_precision
+    - per_class_recall
+    - per_class_f1

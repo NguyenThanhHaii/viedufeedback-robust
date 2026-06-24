@@ -1,0 +1,25 @@
+task: sentiment
+seed: 42
+
+model:
+  name: vinai/phobert-base
+  num_labels: null
+
+text_processing:
+  word_segmentation: true
+  segmenter: vncorenlp
+
+training:
+  max_length: null
+  batch_size: 16
+  epochs: 3
+  learning_rate: 0.00002
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  metric_for_best_model: macro_f1
+  early_stopping_patience: 2
+
+paths:
+  output_model_dir: outputs/models/phobert_sentiment
+  metrics_file: outputs/metrics/phobert_sentiment_clean.json
+  predictions_file: outputs/predictions/phobert_sentiment_clean_predictions.csv
