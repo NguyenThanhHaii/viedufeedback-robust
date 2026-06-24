@@ -1,0 +1,4 @@
+﻿split,num_rows,empty_text,missing_text,duplicated_text,missing_sentiment_label,missing_sentiment_name,missing_topic_label,missing_topic_name
+train,11426,0,0,1,0,0,0,0
+validation,1583,0,0,0,0,0,0,0
+test,3166,0,0,0,0,0,0,0

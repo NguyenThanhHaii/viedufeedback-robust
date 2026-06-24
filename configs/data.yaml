@@ -5,15 +5,28 @@ project:
 
 dataset:
   name: UIT-VSFC
-  source: TBD
-  text_col: null
-  sentiment_col: null
-  topic_col: null
-  split_col: null
+  source_type: huggingface
+  hf_name: uitnlp/vietnamese_students_feedback
+
+  text_col: sentence
+  sentiment_col: sentiment
+  topic_col: topic
+  split_col: split
+
+  sentiment_labels:
+    0: negative
+    1: neutral
+    2: positive
+
+  topic_labels:
+    0: lecturer
+    1: training_program
+    2: facility
+    3: others
 
 splits:
   train: train
-  dev: dev
+  dev: validation
   test: test
 
 paths:

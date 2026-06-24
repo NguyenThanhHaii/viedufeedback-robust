@@ -1,0 +1,104 @@
+{
+  "dataset_name": "uitnlp/vietnamese_students_feedback",
+  "source_type": "huggingface",
+  "splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "official_schema": {
+    "text_col": "sentence",
+    "sentiment_col": "sentiment",
+    "topic_col": "topic",
+    "raw_columns": [
+      "sentence",
+      "sentiment",
+      "topic"
+    ],
+    "standardized_columns": [
+      "id",
+      "split",
+      "text",
+      "sentiment_label",
+      "sentiment_name",
+      "topic_label",
+      "topic_name"
+    ]
+  },
+  "sentiment_id2label": {
+    "0": "negative",
+    "1": "neutral",
+    "2": "positive"
+  },
+  "topic_id2label": {
+    "0": "lecturer",
+    "1": "training_program",
+    "2": "facility",
+    "3": "others"
+  },
+  "split_summaries": {
+    "train": {
+      "num_rows": 11426,
+      "num_columns": 3,
+      "columns": [
+        "sentence",
+        "sentiment",
+        "topic"
+      ],
+      "missing_by_column": {
+        "sentence": 0,
+        "sentiment": 0,
+        "topic": 0
+      },
+      "duplicated_rows": 0
+    },
+    "validation": {
+      "num_rows": 1583,
+      "num_columns": 3,
+      "columns": [
+        "sentence",
+        "sentiment",
+        "topic"
+      ],
+      "missing_by_column": {
+        "sentence": 0,
+        "sentiment": 0,
+        "topic": 0
+      },
+      "duplicated_rows": 0
+    },
+    "test": {
+      "num_rows": 3166,
+      "num_columns": 3,
+      "columns": [
+        "sentence",
+        "sentiment",
+        "topic"
+      ],
+      "missing_by_column": {
+        "sentence": 0,
+        "sentiment": 0,
+        "topic": 0
+      },
+      "duplicated_rows": 0
+    }
+  },
+  "column_candidates": {
+    "text_candidates": [
+      "sentence"
+    ],
+    "sentiment_candidates": [
+      "sentiment"
+    ],
+    "topic_candidates": [
+      "topic"
+    ]
+  },
+  "raw_dir": "data\\raw",
+  "processed_dir": "data\\processed",
+  "features": {
+    "train": "{'sentence': Value(dtype='string', id=None), 'sentiment': ClassLabel(names=['negative', 'neutral', 'positive'], id=None), 'topic': ClassLabel(names=['lecturer', 'training_program', 'facility', 'others'], id=None)}",
+    "validation": "{'sentence': Value(dtype='string', id=None), 'sentiment': ClassLabel(names=['negative', 'neutral', 'positive'], id=None), 'topic': ClassLabel(names=['lecturer', 'training_program', 'facility', 'others'], id=None)}",
+    "test": "{'sentence': Value(dtype='string', id=None), 'sentiment': ClassLabel(names=['negative', 'neutral', 'positive'], id=None), 'topic': ClassLabel(names=['lecturer', 'training_program', 'facility', 'others'], id=None)}"
+  }
+}

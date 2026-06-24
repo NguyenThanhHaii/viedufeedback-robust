@@ -1,0 +1,4 @@
+﻿split,num_rows,num_columns,duplicated_rows
+train,11426,3,0
+validation,1583,3,0
+test,3166,3,0

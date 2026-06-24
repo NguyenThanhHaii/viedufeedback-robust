@@ -1,0 +1,14 @@
+{
+  "id2label": {
+    "0": "lecturer",
+    "1": "training_program",
+    "2": "facility",
+    "3": "others"
+  },
+  "label2id": {
+    "lecturer": 0,
+    "training_program": 1,
+    "facility": 2,
+    "others": 3
+  }
+}
