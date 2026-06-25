@@ -1,0 +1,8 @@
+﻿variant,noise_type,noise_level,num_rows,changed_count,unchanged_count,changed_percent,avg_char_change_ratio,p50_char_change_ratio,p95_char_change_ratio,max_char_change_ratio
+clean,clean,none,3166,0,3166,0.0,0.0,0.0,0.0,0.0
+mixed_light,mixed,light,3166,1288,1878,40.6822,0.015794,0.0,0.08046,0.530726
+mixed_no_accent,mixed,medium,3166,3162,4,99.8737,0.219922,0.210526,0.297191,0.94247
+no_accent,remove_diacritics,medium,3166,3162,4,99.8737,0.211668,0.20339,0.272727,0.870769
+teencode_light,teencode,light,3166,805,2361,25.4264,0.012741,0.0,0.076923,0.328431
+typo_light,typo,light,3166,694,2472,21.9204,0.002927,0.0,0.018182,0.10479
+typo_medium,typo,medium,3166,1281,1885,40.4611,0.006423,0.0,0.027523,0.095238

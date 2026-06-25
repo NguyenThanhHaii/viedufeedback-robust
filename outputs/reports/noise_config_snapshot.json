@@ -1,0 +1,51 @@
+{
+  "seed": 42,
+  "input_test_file": "D:\\project-ml-engineering\\viedufeedback-robust\\data\\processed\\test_standardized.csv",
+  "text_col": "text",
+  "variants": [
+    {
+      "name": "no_accent",
+      "type": "remove_diacritics",
+      "level": "medium"
+    },
+    {
+      "name": "typo_light",
+      "type": "typo",
+      "level": "light",
+      "token_prob": 0.05
+    },
+    {
+      "name": "typo_medium",
+      "type": "typo",
+      "level": "medium",
+      "token_prob": 0.1
+    },
+    {
+      "name": "teencode_light",
+      "type": "teencode",
+      "level": "light",
+      "replace_prob": 0.25
+    },
+    {
+      "name": "mixed_light",
+      "type": "mixed",
+      "level": "light",
+      "remove_diacritics": false,
+      "teencode_prob": 0.25,
+      "typo_token_prob": 0.05
+    },
+    {
+      "name": "mixed_no_accent",
+      "type": "mixed",
+      "level": "medium",
+      "remove_diacritics": true,
+      "teencode_prob": 0.2,
+      "typo_token_prob": 0.04
+    }
+  ],
+  "outputs": {
+    "clean": "D:\\project-ml-engineering\\viedufeedback-robust\\data\\noisy\\test_clean.csv",
+    "noisy_all": "D:\\project-ml-engineering\\viedufeedback-robust\\data\\noisy\\test_noisy_all.csv",
+    "eval_all": "D:\\project-ml-engineering\\viedufeedback-robust\\data\\noisy\\test_eval_all.csv"
+  }
+}
