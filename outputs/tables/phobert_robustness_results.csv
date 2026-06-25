@@ -1,0 +1,15 @@
+﻿task,model,variant,noise_type,noise_level,num_samples,accuracy,macro_f1,weighted_f1
+sentiment,phobert,clean,clean,none,3166,0.931459,0.822815,0.929772
+sentiment,phobert,typo_light,typo,light,3166,0.929248,0.820352,0.927437
+sentiment,phobert,typo_medium,typo,medium,3166,0.927353,0.818815,0.926026
+sentiment,phobert,teencode_light,teencode,light,3166,0.924826,0.814152,0.923594
+sentiment,phobert,mixed_light,mixed,light,3166,0.921668,0.813839,0.920467
+sentiment,phobert,no_accent,remove_diacritics,medium,3166,0.375237,0.339899,0.429524
+sentiment,phobert,mixed_no_accent,mixed,medium,3166,0.371762,0.340462,0.430592
+topic,phobert,clean,clean,none,3166,0.896399,0.800073,0.894241
+topic,phobert,typo_light,typo,light,3166,0.893557,0.795476,0.891452
+topic,phobert,typo_medium,typo,medium,3166,0.885344,0.78659,0.884517
+topic,phobert,teencode_light,teencode,light,3166,0.885028,0.785276,0.883645
+topic,phobert,mixed_light,mixed,light,3166,0.881238,0.777107,0.879876
+topic,phobert,no_accent,remove_diacritics,medium,3166,0.252369,0.1866,0.320529
+topic,phobert,mixed_no_accent,mixed,medium,3166,0.244157,0.187029,0.31136

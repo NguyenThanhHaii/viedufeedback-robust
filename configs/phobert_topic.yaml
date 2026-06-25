@@ -1,25 +1,29 @@
-task: topic
 seed: 42
+
+task:
+  name: topic
+  label_col: topic_label
+  label_name_col: topic_name
+  num_labels: 4
 
 model:
   name: vinai/phobert-base
-  num_labels: null
-
-text_processing:
-  word_segmentation: true
-  segmenter: vncorenlp
+  max_length: 128
 
 training:
-  max_length: 128
-  batch_size: 16
-  epochs: 3
+  epochs: 4
+  train_batch_size: 16
+  eval_batch_size: 32
   learning_rate: 0.00002
   weight_decay: 0.01
-  warmup_ratio: 0.1
-  metric_for_best_model: macro_f1
+  warmup_ratio: 0.06
+  max_grad_norm: 1.0
   early_stopping_patience: 2
+  fp16: true
 
 paths:
-  output_model_dir: outputs/models/phobert_topic
-  metrics_file: outputs/metrics/phobert_topic_clean.json
-  predictions_file: outputs/predictions/phobert_topic_clean_predictions.csv
+  train_file: data/processed/train_standardized.csv
+  validation_file: data/processed/validation_standardized.csv
+  test_file: data/processed/test_standardized.csv
+  noisy_eval_file: data/noisy/test_eval_all.csv
+  mapping_file: outputs/mappings/topic_label_mapping.json
