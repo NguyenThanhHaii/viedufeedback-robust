@@ -1,0 +1,99 @@
+seed: 42
+
+paths:
+  data_dir: data
+  noisy_dir: data/noisy
+  tables_dir: outputs/tables
+  figures_dir: outputs/figures
+  reports_dir: outputs/reports
+  predictions_dir: outputs/predictions
+  metrics_dir: outputs/metrics
+
+data:
+  validation_file: data/processed/validation_standardized.csv
+  validation_noisy_file: data/noisy/validation_eval_all.csv
+  text_col: text
+  original_id_prefix: validation
+
+inputs:
+  phobert_predictions: outputs/predictions/phobert_robustness_predictions.csv
+  baseline_predictions: outputs/predictions/baseline_robustness_predictions.csv
+
+routing:
+  default_model: phobert
+  fallback_model: tfidf_char_svm
+  no_accent_variants:
+    - no_accent
+    - mixed_no_accent
+
+detector:
+  # Conservative detector: avoid routing very short sentences.
+  min_alpha_chars: 12
+  min_words: 3
+
+  # Threshold candidates are selected on noisy validation only, not on noisy test.
+  threshold_candidates:
+    - 0.0
+    - 0.005
+    - 0.01
+    - 0.02
+    - 0.05
+    - 0.10
+
+  # Used only if selected-threshold JSON is missing.
+  fallback_threshold: 0.02
+
+noisy_validation:
+  variants:
+    - name: clean
+      type: clean
+      level: none
+
+    - name: no_accent
+      type: remove_diacritics
+      level: medium
+
+    - name: typo_light
+      type: typo
+      level: light
+      token_prob: 0.05
+
+    - name: typo_medium
+      type: typo
+      level: medium
+      token_prob: 0.10
+
+    - name: teencode_light
+      type: teencode
+      level: light
+      replace_prob: 0.25
+
+    - name: mixed_light
+      type: mixed
+      level: light
+      remove_diacritics: false
+      teencode_prob: 0.25
+      typo_token_prob: 0.05
+
+    - name: mixed_no_accent
+      type: mixed
+      level: medium
+      remove_diacritics: true
+      teencode_prob: 0.20
+      typo_token_prob: 0.04
+
+evaluation:
+  systems:
+    - phobert_only
+    - tfidf_char_svm_only
+    - robust_router
+    - oracle_router
+
+  variant_order:
+    - clean
+    - typo_light
+    - typo_medium
+    - teencode_light
+    - mixed_light
+    - no_accent
+    - mixed_no_accent

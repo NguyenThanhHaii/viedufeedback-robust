@@ -1,0 +1,2 @@
+﻿scope,accuracy,precision,recall,f1,true_positive,false_positive,true_negative,false_negative,false_positive_rate,false_negative_rate
+overall,0.984839,0.993904,0.95278,0.972908,6033,37,15793,299,0.002337,0.04722

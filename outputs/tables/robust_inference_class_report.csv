@@ -1,0 +1,365 @@
+﻿task,system,variant,label,precision,recall,f1_score,support,variant_order
+sentiment,oracle_router,clean,accuracy,,,0.931459,3166,0
+sentiment,oracle_router,clean,macro avg,0.838886,0.809982,0.822815,3166,0
+sentiment,oracle_router,clean,negative,0.943357,0.957417,0.950335,1409,0
+sentiment,oracle_router,clean,neutral,0.625899,0.520958,0.568627,167,0
+sentiment,oracle_router,clean,positive,0.947401,0.951572,0.949482,1590,0
+sentiment,oracle_router,clean,weighted avg,0.928643,0.931459,0.929772,3166,0
+sentiment,oracle_router,typo_light,accuracy,,,0.929248,3166,1
+sentiment,oracle_router,typo_light,macro avg,0.837781,0.806675,0.820352,3166,1
+sentiment,oracle_router,typo_light,negative,0.9413,0.955997,0.948592,1409,1
+sentiment,oracle_router,typo_light,neutral,0.627737,0.51497,0.565789,167,1
+sentiment,oracle_router,typo_light,positive,0.944305,0.949057,0.946675,1590,1
+sentiment,oracle_router,typo_light,weighted avg,0.926269,0.929248,0.927437,3166,1
+sentiment,oracle_router,typo_medium,accuracy,,,0.927353,3166,2
+sentiment,oracle_router,typo_medium,macro avg,0.830706,0.808828,0.818815,3166,2
+sentiment,oracle_router,typo_medium,negative,0.940393,0.951739,0.946032,1409,2
+sentiment,oracle_router,typo_medium,neutral,0.606897,0.526946,0.564103,167,2
+sentiment,oracle_router,typo_medium,positive,0.944828,0.947799,0.946311,1590,2
+sentiment,oracle_router,typo_medium,weighted avg,0.925029,0.927353,0.926026,3166,2
+sentiment,oracle_router,teencode_light,accuracy,,,0.924826,3166,3
+sentiment,oracle_router,teencode_light,macro avg,0.824704,0.805122,0.814152,3166,3
+sentiment,oracle_router,teencode_light,negative,0.942675,0.945351,0.944011,1409,3
+sentiment,oracle_router,teencode_light,neutral,0.591837,0.520958,0.55414,167,3
+sentiment,oracle_router,teencode_light,positive,0.939601,0.949057,0.944305,1590,3
+sentiment,oracle_router,teencode_light,weighted avg,0.922626,0.924826,0.923594,3166,3
+sentiment,oracle_router,mixed_light,accuracy,,,0.921668,3166,4
+sentiment,oracle_router,mixed_light,macro avg,0.824602,0.804623,0.813839,3166,4
+sentiment,oracle_router,mixed_light,negative,0.940383,0.940383,0.940383,1409,4
+sentiment,oracle_router,mixed_light,neutral,0.598639,0.526946,0.56051,167,4
+sentiment,oracle_router,mixed_light,positive,0.934783,0.946541,0.940625,1590,4
+sentiment,oracle_router,mixed_light,weighted avg,0.919544,0.921668,0.920467,3166,4
+sentiment,oracle_router,no_accent,accuracy,,,0.474416,3166,5
+sentiment,oracle_router,no_accent,macro avg,0.458113,0.490398,0.414024,3166,5
+sentiment,oracle_router,no_accent,negative,0.594926,0.482612,0.532915,1409,5
+sentiment,oracle_router,no_accent,neutral,0.092147,0.526946,0.156863,167,5
+sentiment,oracle_router,no_accent,positive,0.687266,0.461635,0.552295,1590,5
+sentiment,oracle_router,no_accent,weighted avg,0.614779,0.474416,0.522812,3166,5
+sentiment,oracle_router,mixed_no_accent,accuracy,,,0.469678,3166,6
+sentiment,oracle_router,mixed_no_accent,macro avg,0.457614,0.48842,0.411,3166,6
+sentiment,oracle_router,mixed_no_accent,negative,0.595648,0.466288,0.523089,1409,6
+sentiment,oracle_router,mixed_no_accent,neutral,0.090447,0.532934,0.154648,167,6
+sentiment,oracle_router,mixed_no_accent,positive,0.686747,0.466038,0.555264,1590,6
+sentiment,oracle_router,mixed_no_accent,weighted avg,0.614751,0.469678,0.519813,3166,6
+sentiment,phobert_only,clean,accuracy,,,0.931459,3166,0
+sentiment,phobert_only,clean,macro avg,0.838886,0.809982,0.822815,3166,0
+sentiment,phobert_only,clean,negative,0.943357,0.957417,0.950335,1409,0
+sentiment,phobert_only,clean,neutral,0.625899,0.520958,0.568627,167,0
+sentiment,phobert_only,clean,positive,0.947401,0.951572,0.949482,1590,0
+sentiment,phobert_only,clean,weighted avg,0.928643,0.931459,0.929772,3166,0
+sentiment,phobert_only,typo_light,accuracy,,,0.929248,3166,1
+sentiment,phobert_only,typo_light,macro avg,0.837781,0.806675,0.820352,3166,1
+sentiment,phobert_only,typo_light,negative,0.9413,0.955997,0.948592,1409,1
+sentiment,phobert_only,typo_light,neutral,0.627737,0.51497,0.565789,167,1
+sentiment,phobert_only,typo_light,positive,0.944305,0.949057,0.946675,1590,1
+sentiment,phobert_only,typo_light,weighted avg,0.926269,0.929248,0.927437,3166,1
+sentiment,phobert_only,typo_medium,accuracy,,,0.927353,3166,2
+sentiment,phobert_only,typo_medium,macro avg,0.830706,0.808828,0.818815,3166,2
+sentiment,phobert_only,typo_medium,negative,0.940393,0.951739,0.946032,1409,2
+sentiment,phobert_only,typo_medium,neutral,0.606897,0.526946,0.564103,167,2
+sentiment,phobert_only,typo_medium,positive,0.944828,0.947799,0.946311,1590,2
+sentiment,phobert_only,typo_medium,weighted avg,0.925029,0.927353,0.926026,3166,2
+sentiment,phobert_only,teencode_light,accuracy,,,0.924826,3166,3
+sentiment,phobert_only,teencode_light,macro avg,0.824704,0.805122,0.814152,3166,3
+sentiment,phobert_only,teencode_light,negative,0.942675,0.945351,0.944011,1409,3
+sentiment,phobert_only,teencode_light,neutral,0.591837,0.520958,0.55414,167,3
+sentiment,phobert_only,teencode_light,positive,0.939601,0.949057,0.944305,1590,3
+sentiment,phobert_only,teencode_light,weighted avg,0.922626,0.924826,0.923594,3166,3
+sentiment,phobert_only,mixed_light,accuracy,,,0.921668,3166,4
+sentiment,phobert_only,mixed_light,macro avg,0.824602,0.804623,0.813839,3166,4
+sentiment,phobert_only,mixed_light,negative,0.940383,0.940383,0.940383,1409,4
+sentiment,phobert_only,mixed_light,neutral,0.598639,0.526946,0.56051,167,4
+sentiment,phobert_only,mixed_light,positive,0.934783,0.946541,0.940625,1590,4
+sentiment,phobert_only,mixed_light,weighted avg,0.919544,0.921668,0.920467,3166,4
+sentiment,phobert_only,no_accent,accuracy,,,0.375237,3166,5
+sentiment,phobert_only,no_accent,macro avg,0.440888,0.47334,0.339899,3166,5
+sentiment,phobert_only,no_accent,negative,0.555147,0.214336,0.309268,1409,5
+sentiment,phobert_only,no_accent,neutral,0.080186,0.724551,0.144391,167,5
+sentiment,phobert_only,no_accent,positive,0.687332,0.481132,0.566038,1590,5
+sentiment,phobert_only,no_accent,weighted avg,0.596478,0.375237,0.429524,3166,5
+sentiment,phobert_only,mixed_no_accent,accuracy,,,0.371762,3166,6
+sentiment,phobert_only,mixed_no_accent,macro avg,0.445737,0.471545,0.340462,3166,6
+sentiment,phobert_only,mixed_no_accent,negative,0.565141,0.227821,0.324734,1409,6
+sentiment,phobert_only,mixed_no_accent,neutral,0.078674,0.724551,0.141935,167,6
+sentiment,phobert_only,mixed_no_accent,positive,0.693396,0.462264,0.554717,1590,6
+sentiment,phobert_only,mixed_no_accent,weighted avg,0.603892,0.371762,0.430592,3166,6
+sentiment,robust_router,clean,accuracy,,,0.931459,3166,0
+sentiment,robust_router,clean,macro avg,0.838864,0.809982,0.822803,3166,0
+sentiment,robust_router,clean,negative,0.942697,0.957417,0.95,1409,0
+sentiment,robust_router,clean,neutral,0.625899,0.520958,0.568627,167,0
+sentiment,robust_router,clean,positive,0.947995,0.951572,0.94978,1590,0
+sentiment,robust_router,clean,weighted avg,0.928647,0.931459,0.929773,3166,0
+sentiment,robust_router,typo_light,accuracy,,,0.929248,3166,1
+sentiment,robust_router,typo_light,macro avg,0.837759,0.806675,0.82034,3166,1
+sentiment,robust_router,typo_light,negative,0.940642,0.955997,0.948258,1409,1
+sentiment,robust_router,typo_light,neutral,0.627737,0.51497,0.565789,167,1
+sentiment,robust_router,typo_light,positive,0.944897,0.949057,0.946972,1590,1
+sentiment,robust_router,typo_light,weighted avg,0.926274,0.929248,0.927438,3166,1
+sentiment,robust_router,typo_medium,accuracy,,,0.927669,3166,2
+sentiment,robust_router,typo_medium,macro avg,0.833327,0.809038,0.820027,3166,2
+sentiment,robust_router,typo_medium,negative,0.939734,0.951739,0.945698,1409,2
+sentiment,robust_router,typo_medium,neutral,0.615385,0.526946,0.567742,167,2
+sentiment,robust_router,typo_medium,positive,0.944862,0.948428,0.946642,1590,2
+sentiment,robust_router,typo_medium,weighted avg,0.925201,0.927669,0.926236,3166,2
+sentiment,robust_router,teencode_light,accuracy,,,0.924826,3166,3
+sentiment,robust_router,teencode_light,macro avg,0.824677,0.805122,0.814139,3166,3
+sentiment,robust_router,teencode_light,negative,0.942008,0.945351,0.943677,1409,3
+sentiment,robust_router,teencode_light,neutral,0.591837,0.520958,0.55414,167,3
+sentiment,robust_router,teencode_light,positive,0.940187,0.949057,0.944601,1590,3
+sentiment,robust_router,teencode_light,weighted avg,0.922623,0.924826,0.923594,3166,3
+sentiment,robust_router,mixed_light,accuracy,,,0.921668,3166,4
+sentiment,robust_router,mixed_light,macro avg,0.825718,0.804623,0.814312,3166,4
+sentiment,robust_router,mixed_light,negative,0.93905,0.940383,0.939716,1409,4
+sentiment,robust_router,mixed_light,neutral,0.60274,0.526946,0.5623,167,4
+sentiment,robust_router,mixed_light,positive,0.935364,0.946541,0.940919,1590,4
+sentiment,robust_router,mixed_light,weighted avg,0.919459,0.921668,0.920412,3166,4
+sentiment,robust_router,no_accent,accuracy,,,0.475679,3166,5
+sentiment,robust_router,no_accent,macro avg,0.457774,0.491209,0.414838,3166,5
+sentiment,robust_router,no_accent,negative,0.596137,0.481902,0.532967,1409,5
+sentiment,robust_router,no_accent,neutral,0.092925,0.526946,0.157989,167,5
+sentiment,robust_router,no_accent,positive,0.684259,0.46478,0.553558,1590,5
+sentiment,robust_router,no_accent,weighted avg,0.61385,0.475679,0.523529,3166,5
+sentiment,robust_router,mixed_no_accent,accuracy,,,0.469994,3166,6
+sentiment,robust_router,mixed_no_accent,macro avg,0.456365,0.486816,0.410707,3166,6
+sentiment,robust_router,mixed_no_accent,negative,0.596364,0.465578,0.522917,1409,6
+sentiment,robust_router,mixed_no_accent,neutral,0.090164,0.526946,0.153981,167,6
+sentiment,robust_router,mixed_no_accent,positive,0.682569,0.467925,0.555224,1590,6
+sentiment,robust_router,mixed_no_accent,weighted avg,0.612956,0.469994,0.519681,3166,6
+sentiment,tfidf_char_svm_only,clean,accuracy,,,0.875237,3166,0
+sentiment,tfidf_char_svm_only,clean,macro avg,0.73445,0.743985,0.738784,3166,0
+sentiment,tfidf_char_svm_only,clean,negative,0.880248,0.907736,0.893781,1409,0
+sentiment,tfidf_char_svm_only,clean,neutral,0.395604,0.431138,0.412607,167,0
+sentiment,tfidf_char_svm_only,clean,positive,0.927498,0.893082,0.909965,1590,0
+sentiment,tfidf_char_svm_only,clean,weighted avg,0.878414,0.875237,0.876528,3166,0
+sentiment,tfidf_char_svm_only,typo_light,accuracy,,,0.873342,3166,1
+sentiment,tfidf_char_svm_only,typo_light,macro avg,0.726814,0.73726,0.731545,3166,1
+sentiment,tfidf_char_svm_only,typo_light,negative,0.881133,0.904897,0.892857,1409,1
+sentiment,tfidf_char_svm_only,typo_light,neutral,0.372973,0.413174,0.392045,167,1
+sentiment,tfidf_char_svm_only,typo_light,positive,0.926336,0.893711,0.909731,1590,1
+sentiment,tfidf_char_svm_only,typo_light,weighted avg,0.87703,0.873342,0.874915,3166,1
+sentiment,tfidf_char_svm_only,typo_medium,accuracy,,,0.870499,3166,2
+sentiment,tfidf_char_svm_only,typo_medium,macro avg,0.725164,0.738839,0.731212,3166,2
+sentiment,tfidf_char_svm_only,typo_medium,negative,0.876552,0.902058,0.889122,1409,2
+sentiment,tfidf_char_svm_only,typo_medium,neutral,0.371728,0.42515,0.396648,167,2
+sentiment,tfidf_char_svm_only,typo_medium,positive,0.927213,0.889308,0.907865,1590,2
+sentiment,tfidf_char_svm_only,typo_medium,weighted avg,0.875366,0.870499,0.872558,3166,2
+sentiment,tfidf_char_svm_only,teencode_light,accuracy,,,0.869236,3166,3
+sentiment,tfidf_char_svm_only,teencode_light,macro avg,0.725994,0.742901,0.733458,3166,3
+sentiment,tfidf_char_svm_only,teencode_light,negative,0.881857,0.889993,0.885906,1409,3
+sentiment,tfidf_char_svm_only,teencode_light,neutral,0.375635,0.443114,0.406593,167,3
+sentiment,tfidf_char_svm_only,teencode_light,positive,0.920491,0.895597,0.907874,1590,3
+sentiment,tfidf_char_svm_only,teencode_light,weighted avg,0.874557,0.869236,0.871656,3166,3
+sentiment,tfidf_char_svm_only,mixed_light,accuracy,,,0.864498,3166,4
+sentiment,tfidf_char_svm_only,mixed_light,macro avg,0.716572,0.735888,0.72483,3166,4
+sentiment,tfidf_char_svm_only,mixed_light,negative,0.88344,0.882186,0.882812,1409,4
+sentiment,tfidf_char_svm_only,mixed_light,neutral,0.35122,0.431138,0.387097,167,4
+sentiment,tfidf_char_svm_only,mixed_light,positive,0.915058,0.89434,0.90458,1590,4
+sentiment,tfidf_char_svm_only,mixed_light,weighted avg,0.871245,0.864498,0.867596,3166,4
+sentiment,tfidf_char_svm_only,no_accent,accuracy,,,0.474416,3166,5
+sentiment,tfidf_char_svm_only,no_accent,macro avg,0.458113,0.490398,0.414024,3166,5
+sentiment,tfidf_char_svm_only,no_accent,negative,0.594926,0.482612,0.532915,1409,5
+sentiment,tfidf_char_svm_only,no_accent,neutral,0.092147,0.526946,0.156863,167,5
+sentiment,tfidf_char_svm_only,no_accent,positive,0.687266,0.461635,0.552295,1590,5
+sentiment,tfidf_char_svm_only,no_accent,weighted avg,0.614779,0.474416,0.522812,3166,5
+sentiment,tfidf_char_svm_only,mixed_no_accent,accuracy,,,0.469678,3166,6
+sentiment,tfidf_char_svm_only,mixed_no_accent,macro avg,0.457614,0.48842,0.411,3166,6
+sentiment,tfidf_char_svm_only,mixed_no_accent,negative,0.595648,0.466288,0.523089,1409,6
+sentiment,tfidf_char_svm_only,mixed_no_accent,neutral,0.090447,0.532934,0.154648,167,6
+sentiment,tfidf_char_svm_only,mixed_no_accent,positive,0.686747,0.466038,0.555264,1590,6
+sentiment,tfidf_char_svm_only,mixed_no_accent,weighted avg,0.614751,0.469678,0.519813,3166,6
+topic,oracle_router,clean,accuracy,,,0.896399,3166,0
+topic,oracle_router,clean,facility,0.924138,0.924138,0.924138,145,0
+topic,oracle_router,clean,lecturer,0.938256,0.948908,0.943552,2290,0
+topic,oracle_router,clean,macro avg,0.819375,0.786622,0.800073,3166,0
+topic,oracle_router,clean,others,0.638655,0.477987,0.546763,159,0
+topic,oracle_router,clean,training_program,0.776451,0.795455,0.785838,572,0
+topic,oracle_router,clean,weighted avg,0.89333,0.896399,0.894241,3166,0
+topic,oracle_router,typo_light,accuracy,,,0.893557,3166,1
+topic,oracle_router,typo_light,facility,0.911565,0.924138,0.917808,145,1
+topic,oracle_router,typo_light,lecturer,0.936933,0.947162,0.94202,2290,1
+topic,oracle_router,typo_light,macro avg,0.812117,0.784,0.795476,3166,1
+topic,oracle_router,typo_light,others,0.628099,0.477987,0.542857,159,1
+topic,oracle_router,typo_light,training_program,0.77187,0.786713,0.779221,572,1
+topic,oracle_router,typo_light,weighted avg,0.890439,0.893557,0.891452,3166,1
+topic,oracle_router,typo_medium,accuracy,,,0.885344,3166,2
+topic,oracle_router,typo_medium,facility,0.922535,0.903448,0.912892,145,2
+topic,oracle_router,typo_medium,lecturer,0.936272,0.936681,0.936477,2290,2
+topic,oracle_router,typo_medium,macro avg,0.796108,0.778915,0.78659,3166,2
+topic,oracle_router,typo_medium,others,0.573529,0.490566,0.528814,159,2
+topic,oracle_router,typo_medium,training_program,0.752094,0.784965,0.768178,572,2
+topic,oracle_router,typo_medium,weighted avg,0.88415,0.885344,0.884517,3166,2
+topic,oracle_router,teencode_light,accuracy,,,0.885028,3166,3
+topic,oracle_router,teencode_light,facility,0.93007,0.917241,0.923611,145,3
+topic,oracle_router,teencode_light,lecturer,0.935133,0.937991,0.93656,2290,3
+topic,oracle_router,teencode_light,macro avg,0.798531,0.775527,0.785276,3166,3
+topic,oracle_router,teencode_light,others,0.582677,0.465409,0.517483,159,3
+topic,oracle_router,teencode_light,training_program,0.746244,0.781469,0.76345,572,3
+topic,oracle_router,teencode_light,weighted avg,0.883074,0.885028,0.883645,3166,3
+topic,oracle_router,mixed_light,accuracy,,,0.881238,3166,4
+topic,oracle_router,mixed_light,facility,0.909722,0.903448,0.906574,145,4
+topic,oracle_router,mixed_light,lecturer,0.931887,0.937991,0.934929,2290,4
+topic,oracle_router,mixed_light,macro avg,0.787292,0.768844,0.777107,3166,4
+topic,oracle_router,mixed_light,others,0.559701,0.471698,0.511945,159,4
+topic,oracle_router,mixed_light,training_program,0.747856,0.762238,0.754978,572,4
+topic,oracle_router,mixed_light,weighted avg,0.878932,0.881238,0.879876,3166,4
+topic,oracle_router,no_accent,accuracy,,,0.436197,3166,5
+topic,oracle_router,no_accent,facility,0.285714,0.151724,0.198198,145,5
+topic,oracle_router,no_accent,lecturer,0.77884,0.498253,0.607723,2290,5
+topic,oracle_router,no_accent,macro avg,0.348312,0.350866,0.295702,3166,5
+topic,oracle_router,no_accent,others,0.075437,0.515723,0.131621,159,5
+topic,oracle_router,no_accent,training_program,0.253259,0.237762,0.245266,572,5
+topic,oracle_router,no_accent,weighted avg,0.625973,0.436197,0.499572,3166,5
+topic,oracle_router,mixed_no_accent,accuracy,,,0.432091,3166,6
+topic,oracle_router,mixed_no_accent,facility,0.3,0.165517,0.213333,145,6
+topic,oracle_router,mixed_no_accent,lecturer,0.779637,0.48821,0.60043,2290,6
+topic,oracle_router,mixed_no_accent,macro avg,0.354265,0.359841,0.300282,3166,6
+topic,oracle_router,mixed_no_accent,others,0.077199,0.540881,0.135114,159,6
+topic,oracle_router,mixed_no_accent,training_program,0.260223,0.244755,0.252252,572,6
+topic,oracle_router,mixed_no_accent,weighted avg,0.628551,0.432091,0.496427,3166,6
+topic,phobert_only,clean,accuracy,,,0.896399,3166,0
+topic,phobert_only,clean,facility,0.924138,0.924138,0.924138,145,0
+topic,phobert_only,clean,lecturer,0.938256,0.948908,0.943552,2290,0
+topic,phobert_only,clean,macro avg,0.819375,0.786622,0.800073,3166,0
+topic,phobert_only,clean,others,0.638655,0.477987,0.546763,159,0
+topic,phobert_only,clean,training_program,0.776451,0.795455,0.785838,572,0
+topic,phobert_only,clean,weighted avg,0.89333,0.896399,0.894241,3166,0
+topic,phobert_only,typo_light,accuracy,,,0.893557,3166,1
+topic,phobert_only,typo_light,facility,0.911565,0.924138,0.917808,145,1
+topic,phobert_only,typo_light,lecturer,0.936933,0.947162,0.94202,2290,1
+topic,phobert_only,typo_light,macro avg,0.812117,0.784,0.795476,3166,1
+topic,phobert_only,typo_light,others,0.628099,0.477987,0.542857,159,1
+topic,phobert_only,typo_light,training_program,0.77187,0.786713,0.779221,572,1
+topic,phobert_only,typo_light,weighted avg,0.890439,0.893557,0.891452,3166,1
+topic,phobert_only,typo_medium,accuracy,,,0.885344,3166,2
+topic,phobert_only,typo_medium,facility,0.922535,0.903448,0.912892,145,2
+topic,phobert_only,typo_medium,lecturer,0.936272,0.936681,0.936477,2290,2
+topic,phobert_only,typo_medium,macro avg,0.796108,0.778915,0.78659,3166,2
+topic,phobert_only,typo_medium,others,0.573529,0.490566,0.528814,159,2
+topic,phobert_only,typo_medium,training_program,0.752094,0.784965,0.768178,572,2
+topic,phobert_only,typo_medium,weighted avg,0.88415,0.885344,0.884517,3166,2
+topic,phobert_only,teencode_light,accuracy,,,0.885028,3166,3
+topic,phobert_only,teencode_light,facility,0.93007,0.917241,0.923611,145,3
+topic,phobert_only,teencode_light,lecturer,0.935133,0.937991,0.93656,2290,3
+topic,phobert_only,teencode_light,macro avg,0.798531,0.775527,0.785276,3166,3
+topic,phobert_only,teencode_light,others,0.582677,0.465409,0.517483,159,3
+topic,phobert_only,teencode_light,training_program,0.746244,0.781469,0.76345,572,3
+topic,phobert_only,teencode_light,weighted avg,0.883074,0.885028,0.883645,3166,3
+topic,phobert_only,mixed_light,accuracy,,,0.881238,3166,4
+topic,phobert_only,mixed_light,facility,0.909722,0.903448,0.906574,145,4
+topic,phobert_only,mixed_light,lecturer,0.931887,0.937991,0.934929,2290,4
+topic,phobert_only,mixed_light,macro avg,0.787292,0.768844,0.777107,3166,4
+topic,phobert_only,mixed_light,others,0.559701,0.471698,0.511945,159,4
+topic,phobert_only,mixed_light,training_program,0.747856,0.762238,0.754978,572,4
+topic,phobert_only,mixed_light,weighted avg,0.878932,0.881238,0.879876,3166,4
+topic,phobert_only,no_accent,accuracy,,,0.252369,3166,5
+topic,phobert_only,no_accent,facility,0.288889,0.089655,0.136842,145,5
+topic,phobert_only,no_accent,lecturer,0.821333,0.268996,0.405263,2290,5
+topic,phobert_only,no_accent,macro avg,0.320659,0.312683,0.1866,3166,5
+topic,phobert_only,no_accent,others,0.065272,0.823899,0.12096,159,5
+topic,phobert_only,no_accent,training_program,0.107143,0.068182,0.083333,572,5
+topic,phobert_only,no_accent,weighted avg,0.629945,0.252369,0.320529,3166,5
+topic,phobert_only,mixed_no_accent,accuracy,,,0.244157,3166,6
+topic,phobert_only,mixed_no_accent,facility,0.311111,0.096552,0.147368,145,6
+topic,phobert_only,mixed_no_accent,lecturer,0.816156,0.255895,0.389628,2290,6
+topic,phobert_only,mixed_no_accent,macro avg,0.32741,0.310173,0.187029,3166,6
+topic,phobert_only,mixed_no_accent,others,0.063453,0.811321,0.117701,159,6
+topic,phobert_only,mixed_no_accent,training_program,0.118919,0.076923,0.093418,572,6
+topic,phobert_only,mixed_no_accent,weighted avg,0.629254,0.244157,0.31136,3166,6
+topic,robust_router,clean,accuracy,,,0.896083,3166,0
+topic,robust_router,clean,facility,0.924138,0.924138,0.924138,145,0
+topic,robust_router,clean,lecturer,0.938229,0.948472,0.943322,2290,0
+topic,robust_router,clean,macro avg,0.818038,0.786513,0.799525,3166,0
+topic,robust_router,clean,others,0.633333,0.477987,0.544803,159,0
+topic,robust_router,clean,training_program,0.776451,0.795455,0.785838,572,0
+topic,robust_router,clean,weighted avg,0.893043,0.896083,0.893977,3166,0
+topic,robust_router,typo_light,accuracy,,,0.892925,3166,1
+topic,robust_router,typo_light,facility,0.911565,0.924138,0.917808,145,1
+topic,robust_router,typo_light,lecturer,0.936879,0.946288,0.94156,2290,1
+topic,robust_router,typo_light,macro avg,0.80955,0.783782,0.794399,3166,1
+topic,robust_router,typo_light,others,0.617886,0.477987,0.539007,159,1
+topic,robust_router,typo_light,training_program,0.77187,0.786713,0.779221,572,1
+topic,robust_router,typo_light,weighted avg,0.889887,0.892925,0.890926,3166,1
+topic,robust_router,typo_medium,accuracy,,,0.88566,3166,2
+topic,robust_router,typo_medium,facility,0.922535,0.903448,0.912892,145,2
+topic,robust_router,typo_medium,lecturer,0.9363,0.937118,0.936709,2290,2
+topic,robust_router,typo_medium,macro avg,0.797177,0.779024,0.787098,3166,2
+topic,robust_router,typo_medium,others,0.577778,0.490566,0.530612,159,2
+topic,robust_router,typo_medium,training_program,0.752094,0.784965,0.768178,572,2
+topic,robust_router,typo_medium,weighted avg,0.884384,0.88566,0.884775,3166,2
+topic,robust_router,teencode_light,accuracy,,,0.884713,3166,3
+topic,robust_router,teencode_light,facility,0.93007,0.917241,0.923611,145,3
+topic,robust_router,teencode_light,lecturer,0.935105,0.937555,0.936328,2290,3
+topic,robust_router,teencode_light,macro avg,0.797386,0.775418,0.784767,3166,3
+topic,robust_router,teencode_light,others,0.578125,0.465409,0.515679,159,3
+topic,robust_router,teencode_light,training_program,0.746244,0.781469,0.76345,572,3
+topic,robust_router,teencode_light,weighted avg,0.882825,0.884713,0.883386,3166,3
+topic,robust_router,mixed_light,accuracy,,,0.880922,3166,4
+topic,robust_router,mixed_light,facility,0.909722,0.903448,0.906574,145,4
+topic,robust_router,mixed_light,lecturer,0.931887,0.937991,0.934929,2290,4
+topic,robust_router,mixed_light,macro avg,0.786147,0.768407,0.776402,3166,4
+topic,robust_router,mixed_light,others,0.555556,0.471698,0.510204,159,4
+topic,robust_router,mixed_light,training_program,0.747423,0.76049,0.753899,572,4
+topic,robust_router,mixed_light,weighted avg,0.878645,0.880922,0.879594,3166,4
+topic,robust_router,no_accent,accuracy,,,0.442198,3166,5
+topic,robust_router,no_accent,facility,0.278481,0.151724,0.196429,145,5
+topic,robust_router,no_accent,lecturer,0.781547,0.503057,0.612115,2290,5
+topic,robust_router,no_accent,macro avg,0.349868,0.36351,0.300043,3166,5
+topic,robust_router,no_accent,others,0.082407,0.559748,0.143664,159,5
+topic,robust_router,no_accent,training_program,0.257036,0.23951,0.247964,572,5
+topic,robust_router,no_accent,weighted avg,0.628632,0.442198,0.50376,3166,5
+topic,robust_router,mixed_no_accent,accuracy,,,0.437776,3166,6
+topic,robust_router,mixed_no_accent,facility,0.292683,0.165517,0.211454,145,6
+topic,robust_router,mixed_no_accent,lecturer,0.782398,0.493013,0.604875,2290,6
+topic,robust_router,mixed_no_accent,macro avg,0.355454,0.370913,0.304132,3166,6
+topic,robust_router,mixed_no_accent,others,0.083183,0.578616,0.145455,159,6
+topic,robust_router,mixed_no_accent,training_program,0.263551,0.246503,0.254743,572,6
+topic,robust_router,mixed_no_accent,weighted avg,0.631114,0.437776,0.500526,3166,6
+topic,tfidf_char_svm_only,clean,accuracy,,,0.833544,3166,0
+topic,tfidf_char_svm_only,clean,facility,0.858065,0.917241,0.886667,145,0
+topic,tfidf_char_svm_only,clean,lecturer,0.936508,0.875983,0.905235,2290,0
+topic,tfidf_char_svm_only,clean,macro avg,0.707016,0.765605,0.732207,3166,0
+topic,tfidf_char_svm_only,clean,others,0.399083,0.54717,0.461538,159,0
+topic,tfidf_char_svm_only,clean,training_program,0.634409,0.722028,0.675388,572,0
+topic,tfidf_char_svm_only,clean,weighted avg,0.851345,0.833544,0.840575,3166,0
+topic,tfidf_char_svm_only,typo_light,accuracy,,,0.826911,3166,1
+topic,tfidf_char_svm_only,typo_light,facility,0.851613,0.910345,0.88,145,1
+topic,tfidf_char_svm_only,typo_light,lecturer,0.934303,0.869432,0.900701,2290,1
+topic,tfidf_char_svm_only,typo_light,macro avg,0.697595,0.757788,0.723079,3166,1
+topic,tfidf_char_svm_only,typo_light,others,0.379464,0.534591,0.443864,159,1
+topic,tfidf_char_svm_only,typo_light,training_program,0.625,0.716783,0.667752,572,1
+topic,tfidf_char_svm_only,typo_light,weighted avg,0.84677,0.826911,0.834723,3166,1
+topic,tfidf_char_svm_only,typo_medium,accuracy,,,0.825963,3166,2
+topic,tfidf_char_svm_only,typo_medium,facility,0.856209,0.903448,0.879195,145,2
+topic,tfidf_char_svm_only,typo_medium,lecturer,0.935059,0.867686,0.900113,2290,2
+topic,tfidf_char_svm_only,typo_medium,macro avg,0.696582,0.756501,0.721417,3166,2
+topic,tfidf_char_svm_only,typo_medium,others,0.367965,0.534591,0.435897,159,2
+topic,tfidf_char_svm_only,typo_medium,training_program,0.627093,0.72028,0.670464,572,2
+topic,tfidf_char_svm_only,typo_medium,weighted avg,0.847327,0.825963,0.834351,3166,2
+topic,tfidf_char_svm_only,teencode_light,accuracy,,,0.822805,3166,3
+topic,tfidf_char_svm_only,teencode_light,facility,0.856209,0.903448,0.879195,145,3
+topic,tfidf_char_svm_only,teencode_light,lecturer,0.933993,0.865066,0.898209,2290,3
+topic,tfidf_char_svm_only,teencode_light,macro avg,0.694285,0.756368,0.719644,3166,3
+topic,tfidf_char_svm_only,teencode_light,others,0.367089,0.54717,0.439394,159,3
+topic,tfidf_char_svm_only,teencode_light,training_program,0.619847,0.70979,0.661777,572,3
+topic,tfidf_char_svm_only,teencode_light,weighted avg,0.845204,0.822805,0.83158,3166,3
+topic,tfidf_char_svm_only,mixed_light,accuracy,,,0.821226,3166,4
+topic,tfidf_char_svm_only,mixed_light,facility,0.863636,0.917241,0.889632,145,4
+topic,tfidf_char_svm_only,mixed_light,lecturer,0.931326,0.864629,0.896739,2290,4
+topic,tfidf_char_svm_only,mixed_light,macro avg,0.693128,0.75595,0.718579,3166,4
+topic,tfidf_char_svm_only,mixed_light,others,0.353909,0.540881,0.427861,159,4
+topic,tfidf_char_svm_only,mixed_light,training_program,0.623639,0.701049,0.660082,572,4
+topic,tfidf_char_svm_only,mixed_light,weighted avg,0.843638,0.821226,0.830109,3166,4
+topic,tfidf_char_svm_only,no_accent,accuracy,,,0.436197,3166,5
+topic,tfidf_char_svm_only,no_accent,facility,0.285714,0.151724,0.198198,145,5
+topic,tfidf_char_svm_only,no_accent,lecturer,0.77884,0.498253,0.607723,2290,5
+topic,tfidf_char_svm_only,no_accent,macro avg,0.348312,0.350866,0.295702,3166,5
+topic,tfidf_char_svm_only,no_accent,others,0.075437,0.515723,0.131621,159,5
+topic,tfidf_char_svm_only,no_accent,training_program,0.253259,0.237762,0.245266,572,5
+topic,tfidf_char_svm_only,no_accent,weighted avg,0.625973,0.436197,0.499572,3166,5
+topic,tfidf_char_svm_only,mixed_no_accent,accuracy,,,0.432091,3166,6
+topic,tfidf_char_svm_only,mixed_no_accent,facility,0.3,0.165517,0.213333,145,6
+topic,tfidf_char_svm_only,mixed_no_accent,lecturer,0.779637,0.48821,0.60043,2290,6
+topic,tfidf_char_svm_only,mixed_no_accent,macro avg,0.354265,0.359841,0.300282,3166,6
+topic,tfidf_char_svm_only,mixed_no_accent,others,0.077199,0.540881,0.135114,159,6
+topic,tfidf_char_svm_only,mixed_no_accent,training_program,0.260223,0.244755,0.252252,572,6
+topic,tfidf_char_svm_only,mixed_no_accent,weighted avg,0.628551,0.432091,0.496427,3166,6

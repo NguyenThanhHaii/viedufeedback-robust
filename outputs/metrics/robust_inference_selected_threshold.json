@@ -1,0 +1,24 @@
+{
+  "threshold": 0.1,
+  "selection_metric": "detector_f1_then_low_false_positive_rate",
+  "selected_row": {
+    "threshold": 0.1,
+    "route_to_char_rate": 0.273531,
+    "accuracy": 0.986012,
+    "precision": 0.996701,
+    "recall": 0.954201,
+    "f1": 0.974988,
+    "true_positive": 3021.0,
+    "false_positive": 10.0,
+    "true_negative": 7905.0,
+    "false_negative": 145.0,
+    "false_positive_rate": 0.001263,
+    "false_negative_rate": 0.045799
+  },
+  "min_alpha_chars": 12,
+  "min_words": 3,
+  "no_accent_variants": [
+    "no_accent",
+    "mixed_no_accent"
+  ]
+}

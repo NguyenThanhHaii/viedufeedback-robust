@@ -1,0 +1,8 @@
+﻿scope,variant,total,route_to_char_svm,route_to_phobert,route_to_char_rate,true_no_accent_variant,mean_accented_ratio,median_accented_ratio
+variant,clean,3166,7,3159,0.002211,False,0.275389,0.272727
+variant,mixed_light,3166,9,3157,0.002843,False,0.271621,0.27027
+variant,mixed_no_accent,3166,3013,153,0.951674,True,0.0,0.0
+variant,no_accent,3166,3020,146,0.953885,True,0.0,0.0
+variant,teencode_light,3166,7,3159,0.002211,False,0.272048,0.27027
+variant,typo_light,3166,7,3159,0.002211,False,0.275022,0.272727
+variant,typo_medium,3166,7,3159,0.002211,False,0.274831,0.272727

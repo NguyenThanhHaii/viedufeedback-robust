@@ -1,0 +1,8 @@
+﻿variant,noise_type,noise_level,num_rows,changed_percent
+clean,clean,none,1583,0.0
+no_accent,remove_diacritics,medium,1583,99.7473
+typo_light,typo,light,1583,100.0
+typo_medium,typo,medium,1583,100.0
+teencode_light,teencode,light,1583,100.0
+mixed_light,mixed,light,1583,100.0
+mixed_no_accent,mixed,medium,1583,100.0
