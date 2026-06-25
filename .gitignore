@@ -20,12 +20,14 @@ data/noisy/*
 
 # Large model artifacts
 outputs/models/phobert/
+outputs/models/baseline/*.joblib
+outputs/models/baseline/*.json
 *.pt
 *.bin
 *.safetensors
 *.ckpt
 
-# Generated prediction files can be recreated
+# Generated prediction files
 outputs/predictions/*
 !outputs/predictions/.gitkeep
 
@@ -34,22 +36,11 @@ kaggle/input/*.zip
 kaggle/working/
 *.zip
 
+# Temporary folders
+clean_tmp/
+
 # OS / IDE
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
-
-# Large/generated artifacts
-outputs/predictions/
-outputs/models/phobert/
-outputs/models/baseline/*.joblib
-outputs/models/baseline/*.json
-
-# Temporary copy folders
-clean_tmp/
-*.zip
-
-# Python cache
-__pycache__/
-*.pyc
