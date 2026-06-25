@@ -8,7 +8,7 @@ from inference_utils import RobustInferenceEngine, project_root_from_demo_file
 
 
 st.set_page_config(
-    page_title="ViEduFeedback Classifier",
+    page_title="Phân loại phản hồi sinh viên",
     page_icon="🎓",
     layout="wide",
 )
@@ -21,7 +21,7 @@ def load_engine(root_path: str) -> RobustInferenceEngine:
 
 def show_scores(title: str, scores: dict) -> None:
     if not scores:
-        st.caption(f"{title}: mô hình này không có probability thật; confidence là pseudo-score từ decision margin.")
+        st.caption("LinearSVC không trả xác suất thật; điểm hiển thị là score quy đổi từ margin.")
         return
 
     st.markdown(f"**{title}**")
@@ -32,136 +32,138 @@ def show_scores(title: str, scores: dict) -> None:
 def main() -> None:
     root = project_root_from_demo_file(__file__)
 
-    st.title("🎓 ViEduFeedback Robust Classifier")
-    st.caption("Dự đoán cảm xúc và chủ đề phản hồi sinh viên tiếng Việt")
+    st.title("Phân loại phản hồi sinh viên")
+    st.caption("Dự đoán cảm xúc và chủ đề từ phản hồi tiếng Việt.")
 
-    with st.spinner("Đang load model..."):
+    with st.spinner("Đang tải mô hình..."):
         engine = load_engine(str(root))
 
     with st.sidebar:
-        st.header("Thiết lập")
+        st.header("Tùy chọn")
 
         mode = st.radio(
-            "Chế độ suy luận",
+            "Chế độ",
             options=["auto_router", "phobert_only", "char_svm_only"],
             format_func=lambda value: {
-                "auto_router": "Auto Router: PhoBERT + char SVM fallback",
-                "phobert_only": "PhoBERT only",
-                "char_svm_only": "TF-IDF char SVM only",
+                "auto_router": "Tự động chọn mô hình",
+                "phobert_only": "Chỉ dùng PhoBERT",
+                "char_svm_only": "Chỉ dùng char SVM",
             }[value],
             index=0,
         )
 
         st.markdown("---")
-        st.write("Detector threshold:", engine.threshold)
-        st.caption("Threshold lấy từ Stage 8 validation.")
+        st.write("Ngưỡng phát hiện thiếu dấu:", engine.threshold)
 
-        with st.expander("Trạng thái model"):
-            if engine.load_errors:
-                for name, error in engine.load_errors.items():
-                    if ("phobert" in name and name.split("_")[-1] in engine.phobert) or (
-                        "char_svm" in name and name.split("_")[-1] in engine.char_svm
-                    ):
-                        continue
+        with st.expander("Model đã tải"):
+            st.write("PhoBERT:", sorted(engine.phobert.keys()))
+            st.write("Char SVM:", sorted(engine.char_svm.keys()))
+
+            visible_errors = {
+                name: error
+                for name, error in engine.load_errors.items()
+                if not (
+                    name.startswith("phobert_") and name.replace("phobert_", "") in engine.phobert
+                )
+                and not (
+                    name.startswith("char_svm_")
+                    and name.replace("char_svm_", "") in engine.char_svm
+                )
+            }
+
+            if visible_errors:
+                for name, error in visible_errors.items():
                     st.warning(f"{name}: {error}")
-            st.write("PhoBERT loaded:", sorted(engine.phobert.keys()))
-            st.write("Char SVM loaded:", sorted(engine.char_svm.keys()))
 
     examples = {
-        "Phản hồi chuẩn, tích cực": "giảng viên rất nhiệt tình, bài giảng dễ hiểu và có nhiều ví dụ thực tế",
-        "Phản hồi chuẩn, tiêu cực": "phòng học nóng, máy chiếu mờ và âm thanh rất khó nghe",
+        "Tích cực": "giảng viên rất nhiệt tình, bài giảng dễ hiểu và có nhiều ví dụ thực tế",
+        "Tiêu cực": "phòng học nóng, máy chiếu mờ và âm thanh rất khó nghe",
         "Thiếu dấu": "giang vien rat nhiet tinh nhung slide hoi kho hieu",
-        "Teencode": "gv day ok nhung phong hoc hoi nong",
+        "Viết tắt": "gv day ok nhung phong hoc hoi nong",
     }
 
-    selected_example = st.selectbox("Chọn ví dụ nhanh", list(examples.keys()))
-    default_text = examples[selected_example]
-
+    selected_example = st.selectbox("Ví dụ nhanh", list(examples.keys()))
     text = st.text_area(
-        "Nhập phản hồi của sinh viên",
-        value=default_text,
+        "Nhập phản hồi",
+        value=examples[selected_example],
         height=130,
         placeholder="Ví dụ: giảng viên dạy dễ hiểu nhưng phòng học hơi nóng",
     )
 
-    predict_clicked = st.button("Dự đoán", type="primary")
-
-    if not predict_clicked:
-        st.info("Nhập phản hồi rồi bấm **Dự đoán**.")
-        return
+    if not st.button("Dự đoán", type="primary"):
+        st.stop()
 
     text = text.strip()
     if not text:
         st.error("Vui lòng nhập nội dung phản hồi.")
-        return
+        st.stop()
 
     try:
         result = engine.predict_both(text, mode=mode)
     except Exception as exc:
-        st.error("Không thể dự đoán. Kiểm tra lại model artifacts.")
+        st.error("Không thể dự đoán. Hãy kiểm tra lại model trong `outputs/models/`.")
         st.exception(exc)
-        return
+        st.stop()
 
     detector = result["detector"]
     sentiment = result["sentiment"]
     topic = result["topic"]
 
-    st.subheader("1. Phân tích đầu vào")
+    st.subheader("Thông tin đầu vào")
 
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Số ký tự chữ", detector["alpha_chars"])
-    c2.metric("Số từ", detector["word_count"])
-    c3.metric("Ký tự tiếng Việt có dấu", detector["marked_vietnamese_chars"])
-    c4.metric("Accented ratio", f"{detector['accented_ratio']:.4f}")
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("Số ký tự chữ", detector["alpha_chars"])
+    col2.metric("Số từ", detector["word_count"])
+    col3.metric("Ký tự có dấu", detector["marked_vietnamese_chars"])
+    col4.metric("Tỷ lệ ký tự có dấu", f"{detector['accented_ratio']:.4f}")
 
     if detector["suspected_no_accent"]:
-        st.warning("Detector: phản hồi có khả năng **thiếu dấu** → ưu tiên TF-IDF char SVM trong Auto Router.")
+        st.warning("Câu này có khả năng thiếu dấu. Ở chế độ tự động, hệ thống dùng char SVM.")
     else:
-        st.success("Detector: phản hồi không bị xem là thiếu dấu → ưu tiên PhoBERT trong Auto Router.")
+        st.success("Câu này không bị xem là thiếu dấu. Ở chế độ tự động, hệ thống dùng PhoBERT.")
 
-    st.subheader("2. Kết quả dự đoán")
+    st.subheader("Kết quả")
 
-    col1, col2 = st.columns(2)
+    left, right = st.columns(2)
 
-    with col1:
+    with left:
         st.markdown("### Cảm xúc")
-        st.metric("Nhãn", sentiment.label_vi)
-        st.write("Model dùng:", sentiment.model_used)
+        st.metric("Nhãn dự đoán", sentiment.label_vi)
+        st.write("Model:", sentiment.model_used)
         if sentiment.confidence is not None:
-            st.write("Confidence:", f"{sentiment.confidence:.4f}")
+            st.write("Điểm tin cậy:", f"{sentiment.confidence:.4f}")
         show_scores("Điểm từng lớp", sentiment.scores)
 
-    with col2:
+    with right:
         st.markdown("### Chủ đề")
-        st.metric("Nhãn", topic.label_vi)
-        st.write("Model dùng:", topic.model_used)
+        st.metric("Nhãn dự đoán", topic.label_vi)
+        st.write("Model:", topic.model_used)
         if topic.confidence is not None:
-            st.write("Confidence:", f"{topic.confidence:.4f}")
+            st.write("Điểm tin cậy:", f"{topic.confidence:.4f}")
         show_scores("Điểm từng lớp", topic.scores)
 
-    st.subheader("3. JSON kết quả")
-
-    st.json(
-        {
-            "text": result["text"],
-            "mode": result["mode"],
-            "detector": result["detector"],
-            "sentiment": {
-                "label_id": sentiment.label_id,
-                "label_en": sentiment.label_en,
-                "label_vi": sentiment.label_vi,
-                "model_used": sentiment.model_used,
-                "confidence": sentiment.confidence,
-            },
-            "topic": {
-                "label_id": topic.label_id,
-                "label_en": topic.label_en,
-                "label_vi": topic.label_vi,
-                "model_used": topic.model_used,
-                "confidence": topic.confidence,
-            },
-        }
-    )
+    with st.expander("JSON kết quả"):
+        st.json(
+            {
+                "text": result["text"],
+                "mode": result["mode"],
+                "detector": result["detector"],
+                "sentiment": {
+                    "label_id": sentiment.label_id,
+                    "label_en": sentiment.label_en,
+                    "label_vi": sentiment.label_vi,
+                    "model_used": sentiment.model_used,
+                    "confidence": sentiment.confidence,
+                },
+                "topic": {
+                    "label_id": topic.label_id,
+                    "label_en": topic.label_en,
+                    "label_vi": topic.label_vi,
+                    "model_used": topic.model_used,
+                    "confidence": topic.confidence,
+                },
+            }
+        )
 
 
 if __name__ == "__main__":

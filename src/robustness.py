@@ -368,7 +368,7 @@ def write_robustness_report(
     lines.append("```")
     lines.append("")
 
-    lines.append("## 6. Notes")
+    lines.append("## 6. Ghi chú")
     lines.append("")
     lines.append("- Macro-F1 là metric chính vì dữ liệu mất cân bằng.")
     lines.append("- Robustness drop được tính so với clean test cùng model và cùng task.")

@@ -450,7 +450,7 @@ def write_noisy_generation_report(
     lines.append("```")
     lines.append("")
 
-    lines.append("## 5. Notes")
+    lines.append("## 5. Ghi chú")
     lines.append("")
     lines.append("- Các nhãn sentiment/topic được giữ nguyên từ clean test set.")
     lines.append("- Noise generation dùng seed cố định để có thể tái lập.")

@@ -1,51 +1,61 @@
-# Streamlit Prediction Demo
+# Demo
 
-Demo app triển khai dạng nhập phản hồi và nhận dự đoán:
+Streamlit app dùng để nhập phản hồi sinh viên và dự đoán:
 
-- Cảm xúc: negative / neutral / positive.
-- Chủ đề: lecturer / training_program / facility / others.
-- Auto Router: dùng PhoBERT mặc định, fallback sang TF-IDF char SVM nếu phát hiện thiếu dấu.
+- cảm xúc phản hồi
+- chủ đề phản hồi
+- câu có bị nghi thiếu dấu hay không
+- mô hình được dùng trong chế độ tự động
 
-## 1. Điều kiện model artifacts
+## Chuẩn bị
 
-PhoBERT cần có:
+Cài thư viện:
+
+```powershell
+conda activate viedufeedback
+pip install -r demo/requirements_demo.txt
+```
+
+Cần có PhoBERT fine-tuned:
 
 ```text
 outputs/models/phobert/sentiment/best/
 outputs/models/phobert/topic/best/
 ```
 
-TF-IDF char SVM cần có:
+Cần có TF-IDF char SVM fallback:
 
 ```text
 outputs/models/baseline/sentiment_tfidf_char_svm.joblib
 outputs/models/baseline/topic_tfidf_char_svm.joblib
 ```
 
-Nếu thiếu SVM, chạy:
+Nếu thiếu SVM fallback:
 
 ```powershell
 python scripts/export_char_svm_models.py
 ```
 
-## 2. Cài thư viện
-
-```powershell
-conda activate viedufeedback
-pip install streamlit torch transformers sentencepiece joblib scikit-learn
-```
-
-## 3. Chạy app
+## Chạy app
 
 ```powershell
 streamlit run demo/app.py
 ```
 
-## 4. Ghi chú
+Hoặc:
 
-- App dự đoán thật cho câu người dùng nhập.
-- Với Auto Router:
-  - Câu có dấu bình thường: dùng PhoBERT.
-  - Câu có khả năng thiếu dấu: dùng TF-IDF char SVM.
-- Confidence của PhoBERT là softmax probability.
-- Confidence của LinearSVC chỉ là pseudo-score từ decision margin, không phải xác suất xác thực.
+```powershell
+.\demo\run_demo.ps1
+```
+
+## Ví dụ
+
+```text
+giảng viên rất nhiệt tình, bài giảng dễ hiểu
+```
+
+```text
+giang vien rat nhiet tinh nhung slide hoi kho hieu
+```
+
+Chế độ mặc định là **Tự động chọn mô hình**: PhoBERT được dùng cho câu bình thường, TF-IDF char SVM được dùng khi câu có khả năng thiếu dấu.

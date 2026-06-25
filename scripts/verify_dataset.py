@@ -247,7 +247,7 @@ def write_markdown_report(
     lines.append(_dataframe_to_markdown(quality_df))
     lines.append("")
 
-    lines.append("## 7. Verification Notes")
+    lines.append("## 7. Ghi chú kiểm tra")
     lines.append("")
     lines.append("- Dataset có đủ 3 split: train, validation, test.")
     lines.append("- Dataset có đủ nhãn cho cả sentiment classification và topic classification.")

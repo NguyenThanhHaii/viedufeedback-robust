@@ -392,7 +392,7 @@ def write_eda_report(
     lines.append(max_length_df.to_markdown(index=False))
     lines.append("")
 
-    lines.append("## 8. Notes")
+    lines.append("## 8. Ghi chú")
     lines.append("")
     lines.append("- Giai đoạn này chỉ phân tích dữ liệu, chưa train model.")
     lines.append("- `whitespace_word_count` chỉ là thống kê theo khoảng trắng, không phải tách từ tiếng Việt chuẩn.")
