@@ -1,15 +1,13 @@
-Giai đoạn Môi trường Thời lượng đề xuất Kết quả 0. Repo setup Local 0.5 ngày Repo sạch, config, requirements
+# Kế hoạch thực nghiệm
 
-1. Dataset verification Local 1 ngày split summary, label mapping
-2. EDA Local 1 ngày biểu đồ, length summary
-3. Baseline Local 1–2 ngày baseline metrics
-4. Noisy test Local 1 ngày noisy test + audit
-
-5. Kaggle smoke test Kaggle 0.5 ngày xác nhận GPU/code chạy
-6. Train PhoBERT sentiment Kaggle 0.5–1 ngày checkpoint sentiment
-7. Train PhoBERT topic Kaggle 0.5–1 ngày checkpoint topic
-8. Evaluate noisy Kaggle 0.5 ngày noisy predictions
-
-9. Robustness tables Local 1 ngày F1 drop, heatmap
-10. Error analysis Local 1–2 ngày error cases
-11. Báo cáo/slide Local 4–7 ngày report + slides
+| Stage | Nội dung | Output chính |
+|---|---|---|
+| 1 | Kiểm tra và chuẩn hóa dataset | split summary, label mapping |
+| 2 | EDA | phân phối nhãn, độ dài văn bản |
+| 3 | Baseline | Majority, TF-IDF word SVM, TF-IDF char SVM |
+| 4 | Noisy test | clean, no_accent, typo, teencode, mixed |
+| 5 | Baseline robustness | Macro-F1 drop theo từng noise |
+| 6 | PhoBERT | clean result, noisy result, prediction |
+| 7 | Final comparison | bảng so sánh, error examples |
+| 8 | Robust inference | PhoBERT + char SVM fallback |
+| Demo | Streamlit app | nhập phản hồi và dự đoán nhãn |
