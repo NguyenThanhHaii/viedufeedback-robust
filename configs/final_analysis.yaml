@@ -1,0 +1,43 @@
+seed: 42
+
+paths:
+  tables_dir: outputs/tables
+  figures_dir: outputs/figures
+  reports_dir: outputs/reports
+  predictions_dir: outputs/predictions
+  metrics_dir: outputs/metrics
+
+inputs:
+  baseline_robustness_results: outputs/tables/baseline_robustness_results.csv
+  baseline_robustness_drop: outputs/tables/baseline_robustness_drop.csv
+  baseline_robustness_class_report: outputs/tables/baseline_robustness_class_report.csv
+  baseline_robustness_predictions: outputs/predictions/baseline_robustness_predictions.csv
+
+  phobert_clean_results: outputs/tables/phobert_clean_results.csv
+  phobert_robustness_results: outputs/tables/phobert_robustness_results.csv
+  phobert_robustness_drop: outputs/tables/phobert_robustness_drop.csv
+  phobert_clean_classification_report: outputs/tables/phobert_clean_classification_report.csv
+  phobert_robustness_class_report: outputs/tables/phobert_robustness_class_report.csv
+  phobert_robustness_predictions: outputs/predictions/phobert_robustness_predictions.csv
+
+variant_order:
+  - clean
+  - typo_light
+  - typo_medium
+  - teencode_light
+  - mixed_light
+  - no_accent
+  - mixed_no_accent
+
+model_order:
+  - majority
+  - tfidf_word_svm
+  - tfidf_char_svm
+  - phobert
+
+error_analysis:
+  target_variants:
+    - no_accent
+    - mixed_no_accent
+    - mixed_light
+  max_examples_per_variant: 30

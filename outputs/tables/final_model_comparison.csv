@@ -1,0 +1,9 @@
+﻿task,model,model_family,variant,accuracy,macro_f1,weighted_f1,rank_macro_f1,rank_accuracy,is_best_clean_macro_f1
+sentiment,phobert,phobert,clean,0.931459,0.822815,0.929772,1,1,True
+sentiment,tfidf_char_svm,baseline,clean,0.8752368919772584,0.7387842592562812,0.8765275526811909,2,3,False
+sentiment,tfidf_word_svm,baseline,clean,0.8919772583701832,0.7289041804941077,0.8869996271404461,3,2,False
+sentiment,majority,baseline,clean,0.5022109917877448,0.2228763666947014,0.3357928834913852,4,4,False
+topic,phobert,phobert,clean,0.896399,0.800073,0.894241,1,1,True
+topic,tfidf_word_svm,baseline,clean,0.8584965255843335,0.7509224329491841,0.8598470959343006,2,2,False
+topic,tfidf_char_svm,baseline,clean,0.8335439039797852,0.732207043612927,0.8405751122231676,3,3,False
+topic,majority,baseline,clean,0.7233101705622236,0.2098607038123167,0.6071775258751805,4,4,False
