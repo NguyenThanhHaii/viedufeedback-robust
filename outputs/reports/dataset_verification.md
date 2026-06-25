@@ -99,7 +99,7 @@ Các cột dưới đây là kết quả kiểm tra tự động theo tên cột
 | validation | 1583 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | test | 3166 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-## 7. Verification Notes
+## 7. Ghi chú kiểm tra
 
 - Dataset có đủ 3 split: train, validation, test.
 - Dataset có đủ nhãn cho cả sentiment classification và topic classification.
