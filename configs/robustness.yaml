@@ -1,0 +1,40 @@
+seed: 42
+
+data:
+  eval_file: data/noisy/test_eval_all.csv
+  text_col: text
+
+paths:
+  baseline_models_dir: outputs/models/baseline
+  mappings_dir: outputs/mappings
+  tables_dir: outputs/tables
+  metrics_dir: outputs/metrics
+  predictions_dir: outputs/predictions
+  figures_dir: outputs/figures
+  reports_dir: outputs/reports
+
+tasks:
+  sentiment:
+    label_col: sentiment_label
+    mapping_file: sentiment_label_mapping.json
+    models:
+      - majority
+      - tfidf_word_svm
+      - tfidf_char_svm
+
+  topic:
+    label_col: topic_label
+    mapping_file: topic_label_mapping.json
+    models:
+      - majority
+      - tfidf_word_svm
+      - tfidf_char_svm
+
+variant_order:
+  - clean
+  - no_accent
+  - typo_light
+  - typo_medium
+  - teencode_light
+  - mixed_light
+  - mixed_no_accent
