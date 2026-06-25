@@ -1,0 +1,41 @@
+seed: 42
+
+data:
+  input_file: data/processed/all_standardized.csv
+
+columns:
+  split: split
+  text: text
+  sentiment_label: sentiment_label
+  sentiment_name: sentiment_name
+  topic_label: topic_label
+  topic_name: topic_name
+
+tokenizer:
+  model_name: vinai/phobert-base
+  batch_size: 256
+  add_special_tokens: true
+
+analysis:
+  percentiles:
+    - 0
+    - 25
+    - 50
+    - 75
+    - 90
+    - 95
+    - 99
+    - 100
+  max_length_candidates:
+    - 64
+    - 96
+    - 128
+    - 160
+    - 192
+    - 256
+  sample_per_label: 10
+
+paths:
+  tables_dir: outputs/tables
+  figures_dir: outputs/figures
+  reports_dir: outputs/reportscode src\eda.py

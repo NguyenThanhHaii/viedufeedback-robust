@@ -1,0 +1,10 @@
+﻿split,metric,mean,std,min,max
+test,char_count,58.8364,44.1283,4,411
+test,whitespace_word_count,14.2208,10.2424,2,98
+test,phobert_subword_count,16.5474,10.5533,4,102
+train,char_count,59.0849,43.0852,4,660
+train,whitespace_word_count,14.3088,10.0897,2,159
+train,phobert_subword_count,16.604,10.3808,4,163
+validation,char_count,56.362,42.7654,4,718
+validation,whitespace_word_count,13.6715,9.9128,2,161
+validation,phobert_subword_count,15.9097,10.1567,4,164

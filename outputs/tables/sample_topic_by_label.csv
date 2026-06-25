@@ -1,0 +1,41 @@
+﻿id,split,text,topic_label,topic_name
+train_11324,train,"giảng viên nhiệt tình , dạy dễ hiểu .",0,lecturer
+test_2240,test,thầy giảng dạy rất lôi cuốn và dễ hiểu .,0,lecturer
+train_8084,train,cô giảng và dạy rất nhiệt tình .,0,lecturer
+train_3484,train,"thầy tận tâm , nhiệt tình , giảng kỹ bài học .",0,lecturer
+test_1087,test,"qua hai học kỳ được học các môn học do thầy wzjwz110 giảng dạy , thầy dạy rất được .",0,lecturer
+train_5957,train,giảng viên nên cũng cấp slide cho sinh viên .,0,lecturer
+test_1389,test,giảng viên sử dụng giờ lên lớp hiệu quả .,0,lecturer
+train_6792,train,thảo luận hiệu quả .,0,lecturer
+validation_100,validation,"tận tình , chu đáo , hiểu tâm lý sinh viên .",0,lecturer
+train_9904,train,"giảng viên tận tâm , tận tình .",0,lecturer
+train_1546,train,"buổi nào cũng có thực hành, học lý thuyết xong ra thực hành liền sẽ có hiệu quả cao !",1,training_program
+test_2453,test,không biết gì sau khi học môn này .,1,training_program
+train_632,train,nội dung thực hành nên thay đổi doubledot mỗi tuần thực hành các phần lý thuyết trên lớp và giảng viên hướng dẫn làm đồ án cuối kỳ .,1,training_program
+train_2821,train,"môn học liên hệ thực tế , liên kết với đồ án hơn .",1,training_program
+train_5150,train,cần đề cương môn học rõ ràng .,1,training_program
+train_6753,train,"ngoài ra sinh viên cũng không có đủ khả năng để hiểu được "" source code "" có tốt hay không .",1,training_program
+train_7168,train,nội dung bài giảng không thực sự hấp dẫn .,1,training_program
+test_2264,test,em đóng góp cũng chỉ mong để sau này các lớp xử lý ngôn ngữ tự nhiên đông hơn và nhiều sinh viên chọn hơn .,1,training_program
+train_7916,train,"bài học rõ ràng , bám sát nội dung thi .",1,training_program
+train_3958,train,"môn học nên cập nhật giáo trình mới liên tục , tài liệu học tập cũ , rất nhiều chỗ sai .",1,training_program
+validation_327,validation,mini test trong cả khóa học nhiều hơn .,2,facility
+train_8724,train,"phòng học , bàn ghế còn bẩn và nhiều bụi bặm .",2,facility
+train_4803,train,cần nâng cao chất lượng phòng máy .,2,facility
+train_5518,train,máy tính không được tốt lắm .,2,facility
+train_10044,train,phòng thực hành cần được nâng cấp .,2,facility
+train_9989,train,phòng học và các thiết bị giảng dạy cần được nâng cấp tốt hơn .,2,facility
+train_5130,train,cần trang bị phòng thực hành phù hợp với đặc thù môn học .,2,facility
+train_4990,train,chất lượng mạng trong phòng máy mạnh nhưng chấy lượng máy kém .,2,facility
+train_1584,train,máy chiếu phòng wzjwz11 chất lượng quá kém .,2,facility
+train_10141,train,máy chiếu bị ảnh hưởng bởi ánh sáng nên xem slide không rõ .,2,facility
+train_4003,train,em cảm thấy khá bức xúc nhưng nếu truy ra lỗi của ai thì em tự nhận một phần về mình .,3,others
+train_5972,train,tiếng anh .,3,others
+test_1849,test,vì thời gian trong lớp tập trung hơn .,3,others
+train_4515,train,"những thứ đó không đủ để làm bài thực hành như tuần 5 , tuần 6 , tuần 7 .",3,others
+train_10983,train,cô rất yêu nghề và thương sinh viên .,3,others
+test_2954,test,cần có giờ ra chơi giữa giờ vì học liên tục năm tiết đôi khi khiến sinh viên mệt mà khó tiếp thu bài giảng .,3,others
+train_4071,train,không hài lòng gì cả .,3,others
+train_6799,train,ước tính khoảng 5 - 6 buổi như vậy .,3,others
+train_6812,train,không hiểu gì .,3,others
+train_10807,train,phục vụ ở mảng nào cho công việc sau này !,3,others

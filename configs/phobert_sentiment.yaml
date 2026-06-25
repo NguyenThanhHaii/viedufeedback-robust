@@ -10,7 +10,7 @@ text_processing:
   segmenter: vncorenlp
 
 training:
-  max_length: null
+  max_length: 128
   batch_size: 16
   epochs: 3
   learning_rate: 0.00002

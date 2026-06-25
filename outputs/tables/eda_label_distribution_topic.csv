@@ -1,0 +1,13 @@
+﻿split,label_id,label_name,count,percent
+test,0,lecturer,2290,72.331
+test,1,training_program,572,18.067
+test,2,facility,145,4.5799
+test,3,others,159,5.0221
+train,0,lecturer,8166,71.4686
+train,1,training_program,2201,19.2631
+train,2,facility,497,4.3497
+train,3,others,562,4.9186
+validation,0,lecturer,1151,72.71
+validation,1,training_program,267,16.8667
+validation,2,facility,70,4.422
+validation,3,others,95,6.0013

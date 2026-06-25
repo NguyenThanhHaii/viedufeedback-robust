@@ -1,0 +1,31 @@
+﻿id,split,text,sentiment_label,sentiment_name
+test_1513,test,"phòng máy không đảm bảo , nhiều máy bị hư , các bạn sinh viên phải mang laptop theo , rất cực .",0,negative
+train_3718,train,"nhiều lúc nói chuyện ngoài lề hơi nhiều , dạy thâm giờ .",0,negative
+test_216,test,"đề nghị bỏ phần thì lý thuyết vào cuối kỳ , chỉ lấy 2 cột điểm seminar giữa kỳ và đồ án cuối kỳ .",0,negative
+train_8129,train,cần cho bài tập để học sinh vận dụng ở nhà ạ .,0,negative
+train_2988,train,môn này gắn với thực tế nhiều nên có những các tương tác trực tiếp với nhau .,0,negative
+validation_511,validation,"có bài thì một tuần deadline , có bài thì cả tháng mới deadline , có tuần thì deadline ba bài cùng lúc .",0,negative
+validation_1001,validation,khó tiếp thu .,0,negative
+train_7112,train,"thầy dạy mất quá nhiều giờ , chỉ có 3 tiết nhưng thường dùng tới 5 tiết , ảnh hưởng đến những môn ở tiết 4 5 .",0,negative
+train_7705,train,"cần chú trọng hiệu quả môn học , đảm bảo sinh viên có thể giao tiếp được .",0,negative
+test_1156,test,giảng viên còn đến lớp trễ .,0,negative
+train_3823,train,"phần cho điểm , nội dung ôn thi .",1,neutral
+validation_855,validation,nhanh .,1,neutral
+train_9813,train,phương thức giảng dạy .,1,neutral
+train_3729,train,cảm ơn thầy .,1,neutral
+train_7960,train,cô đi bài tập hơi chậm nhưng như vậy cũng được .,1,neutral
+train_5144,train,bình thường với giảng viên .,1,neutral
+train_5697,train,cô dạy được .,1,neutral
+train_7134,train,không có ý kiến khác .,1,neutral
+train_7614,train,cám ơn thầy !,1,neutral
+train_8973,train,hoạt động tổ chức thuyết trình .,1,neutral
+train_5754,train,"nhiệt tình , khá dễ hiểu .",2,positive
+train_1537,train,"đồng thời , những câu hỏi thầy đặt ra rất sát và đòi hỏi kiến thức sâu so với bài học .",2,positive
+train_6806,train,thảo luận hay .,2,positive
+test_2788,test,"nhiệt tình , chu đáo .",2,positive
+train_2833,train,thầy tạo điều kiện cho sinh viên học tập và rất nhiệt tình giảng dạy .,2,positive
+train_11395,train,"nhiệt tình , giảng bài dễ hiểu , dễ tiếp thu .",2,positive
+train_11320,train,"đúng giờ , dạy dễ hiểu .",2,positive
+train_949,train,"thầy dạy dễ hiểu , rất hay .",2,positive
+train_8334,train,"giảng viên rất nhiệt tình , phương pháp giảng dạy hay , dễ hiểu .",2,positive
+train_7026,train,"thầy rất tận tâm , đến từng bàn để chỉ dẫn !",2,positive
