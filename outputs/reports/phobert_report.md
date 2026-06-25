@@ -1,56 +1,27 @@
-# PhoBERT Fine-tuning Report
+# PhoBERT Report
 
-## 1. Clean test results
+PhoBERT được fine-tune riêng cho hai tác vụ: sentiment và topic.
 
-```text
-     task   model variant  accuracy  macro_f1  weighted_f1  best_epoch  best_val_macro_f1  train_seconds
-sentiment phobert   clean  0.931459  0.822815     0.929772           4           0.848147         469.23
-    topic phobert   clean  0.896399  0.800073     0.894241           4           0.802489         468.99
-```
+## Clean test
 
-## 2. Robustness results
+| task      |   accuracy |   macro_f1 |   weighted_f1 |   best_epoch |
+|:----------|-----------:|-----------:|--------------:|-------------:|
+| sentiment |   0.931459 |   0.822815 |      0.929772 |            4 |
+| topic     |   0.896399 |   0.800073 |      0.894241 |            4 |
 
-```text
-     task   model         variant        noise_type noise_level  num_samples  accuracy  macro_f1  weighted_f1
-sentiment phobert           clean             clean        none         3166  0.931459  0.822815     0.929772
-sentiment phobert      typo_light              typo       light         3166  0.929248  0.820352     0.927437
-sentiment phobert     typo_medium              typo      medium         3166  0.927353  0.818815     0.926026
-sentiment phobert  teencode_light          teencode       light         3166  0.924826  0.814152     0.923594
-sentiment phobert     mixed_light             mixed       light         3166  0.921668  0.813839     0.920467
-sentiment phobert       no_accent remove_diacritics      medium         3166  0.375237  0.339899     0.429524
-sentiment phobert mixed_no_accent             mixed      medium         3166  0.371762  0.340462     0.430592
-    topic phobert           clean             clean        none         3166  0.896399  0.800073     0.894241
-    topic phobert      typo_light              typo       light         3166  0.893557  0.795476     0.891452
-    topic phobert     typo_medium              typo      medium         3166  0.885344  0.786590     0.884517
-    topic phobert  teencode_light          teencode       light         3166  0.885028  0.785276     0.883645
-    topic phobert     mixed_light             mixed       light         3166  0.881238  0.777107     0.879876
-    topic phobert       no_accent remove_diacritics      medium         3166  0.252369  0.186600     0.320529
-    topic phobert mixed_no_accent             mixed      medium         3166  0.244157  0.187029     0.311360
-```
+## Robustness snapshot
 
-## 3. Robustness drop from clean
+| task      | variant         |   accuracy |   macro_f1 |   weighted_f1 |
+|:----------|:----------------|-----------:|-----------:|--------------:|
+| sentiment | clean           |   0.931459 |   0.822815 |      0.929772 |
+| sentiment | typo_light      |   0.929248 |   0.820352 |      0.927437 |
+| sentiment | mixed_light     |   0.921668 |   0.813839 |      0.920467 |
+| sentiment | no_accent       |   0.375237 |   0.339899 |      0.429524 |
+| sentiment | mixed_no_accent |   0.371762 |   0.340462 |      0.430592 |
+| topic     | clean           |   0.896399 |   0.800073 |      0.894241 |
+| topic     | typo_light      |   0.893557 |   0.795476 |      0.891452 |
+| topic     | mixed_light     |   0.881238 |   0.777107 |      0.879876 |
+| topic     | no_accent       |   0.252369 |   0.1866   |      0.320529 |
+| topic     | mixed_no_accent |   0.244157 |   0.187029 |      0.31136  |
 
-```text
-     task   model         variant        noise_type noise_level  clean_accuracy  variant_accuracy  accuracy_drop  accuracy_relative_drop_percent  clean_macro_f1  variant_macro_f1  macro_f1_drop  macro_f1_relative_drop_percent  clean_weighted_f1  variant_weighted_f1  weighted_f1_drop  weighted_f1_relative_drop_percent
-sentiment phobert           clean             clean        none        0.931459          0.931459       0.000000                          0.0000        0.822815          0.822815       0.000000                          0.0000           0.929772             0.929772          0.000000                             0.0000
-sentiment phobert      typo_light              typo       light        0.931459          0.929248       0.002211                          0.2374        0.822815          0.820352       0.002463                          0.2993           0.929772             0.927437          0.002335                             0.2511
-sentiment phobert     typo_medium              typo      medium        0.931459          0.927353       0.004106                          0.4408        0.822815          0.818815       0.004000                          0.4861           0.929772             0.926026          0.003746                             0.4029
-sentiment phobert  teencode_light          teencode       light        0.931459          0.924826       0.006633                          0.7121        0.822815          0.814152       0.008663                          1.0528           0.929772             0.923594          0.006178                             0.6645
-sentiment phobert     mixed_light             mixed       light        0.931459          0.921668       0.009791                          1.0511        0.822815          0.813839       0.008976                          1.0909           0.929772             0.920467          0.009305                             1.0008
-sentiment phobert       no_accent remove_diacritics      medium        0.931459          0.375237       0.556222                         59.7151        0.822815          0.339899       0.482916                         58.6907           0.929772             0.429524          0.500248                            53.8033
-sentiment phobert mixed_no_accent             mixed      medium        0.931459          0.371762       0.559697                         60.0882        0.822815          0.340462       0.482353                         58.6223           0.929772             0.430592          0.499180                            53.6884
-    topic phobert           clean             clean        none        0.896399          0.896399       0.000000                          0.0000        0.800073          0.800073       0.000000                          0.0000           0.894241             0.894241          0.000000                             0.0000
-    topic phobert      typo_light              typo       light        0.896399          0.893557       0.002842                          0.3170        0.800073          0.795476       0.004597                          0.5746           0.894241             0.891452          0.002789                             0.3119
-    topic phobert     typo_medium              typo      medium        0.896399          0.885344       0.011055                          1.2333        0.800073          0.786590       0.013483                          1.6852           0.894241             0.884517          0.009724                             1.0874
-    topic phobert  teencode_light          teencode       light        0.896399          0.885028       0.011371                          1.2685        0.800073          0.785276       0.014797                          1.8495           0.894241             0.883645          0.010596                             1.1849
-    topic phobert     mixed_light             mixed       light        0.896399          0.881238       0.015161                          1.6913        0.800073          0.777107       0.022966                          2.8705           0.894241             0.879876          0.014365                             1.6064
-    topic phobert       no_accent remove_diacritics      medium        0.896399          0.252369       0.644030                         71.8464        0.800073          0.186600       0.613473                         76.6771           0.894241             0.320529          0.573712                            64.1563
-    topic phobert mixed_no_accent             mixed      medium        0.896399          0.244157       0.652242                         72.7625        0.800073          0.187029       0.613044                         76.6235           0.894241             0.311360          0.582881                            65.1816
-```
-
-## 4. Notes
-
-- Macro-F1 is the primary metric because the dataset is imbalanced.
-- PhoBERT is fine-tuned on clean train data and evaluated on clean/noisy test variants.
-- Noisy variants are not used for training.
-- The same noisy test set is used for baseline and PhoBERT comparison.
+PhoBERT giữ kết quả tốt với typo/teencode nhẹ, nhưng giảm mạnh khi văn bản bị bỏ dấu.

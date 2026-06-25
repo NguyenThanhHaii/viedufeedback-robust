@@ -552,7 +552,7 @@ def write_final_comparison_report(
     lines.append(f"- Topic error examples: {len(topic_errors)}")
     lines.append("")
 
-    lines.append("## 8. Notes")
+    lines.append("## 8. Ghi chú")
     lines.append("")
     lines.append("- Clean test được dùng để đánh giá hiệu năng in-distribution.")
     lines.append("- Noisy test được dùng để đánh giá robustness dưới nhiễu có kiểm soát.")

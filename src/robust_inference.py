@@ -893,7 +893,7 @@ def write_robust_inference_report(
     lines = []
     lines.append("# Stage 8 — Robust Inference Strategy Report")
     lines.append("")
-    lines.append("## 1. Objective")
+    lines.append("## 1. Cách đánh giá")
     lines.append("")
     lines.append(
         "Stage 8 evaluates a robust inference strategy that uses PhoBERT by default "
@@ -930,12 +930,12 @@ def write_robust_inference_report(
     lines.append(focus.to_string(index=False))
     lines.append("```")
     lines.append("")
-    lines.append("## 7. Notes")
+    lines.append("## 7. Ghi chú")
     lines.append("")
-    lines.append("- This stage improves the inference strategy, not the PhoBERT model itself.")
-    lines.append("- The detector threshold is selected on noisy validation, not noisy test.")
-    lines.append("- Robust router is the real deployable strategy.")
-    lines.append("- Oracle router is only an upper bound with perfect variant knowledge.")
+    lines.append("- Stage này cải thiện cách chọn mô hình khi suy luận, không đổi trọng số PhoBERT.")
+    lines.append("- Ngưỡng detector được chọn trên noisy validation.")
+    lines.append("- Robust router là cấu hình dùng cho demo.")
+    lines.append("- Oracle router chỉ dùng để tham khảo khi biết trước loại nhiễu.")
     lines.append("")
 
     output_path.write_text("\n".join(lines), encoding="utf-8")
